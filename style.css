@@ -17,114 +17,98 @@ tlačítko twitter          #1da1f2
 
 body {
   background-color: #bdc3c7;
-  font-family: 'Montserrat';
   line-height: 1.5;
-  font-size: 18px;
-  color: white;
+  margin: 30px;
+}
 
+h1 {
+  color:white;
+  font-family:'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: bolder;
+}
 
+p {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: rgb(207, 202, 202);
+    font-weight: 600;
 }
 
 .foto {
-  width: 500px;
-  position: relative;
-  
+  width: 300px;
 }
-
-
-.profil {
-  margin: 40px;
-  width: 500px;
-  
-}
-
-
-
-p {
-  color: #bdc3c7;
-  font-size: 25px;
-  padding: 0px 40px;
-  
-}
-
-.jmeno {
-  color: white;
-  padding-top: 40px;
-  padding-left: 40px;
-  font-size: 50px;
-}
-
-
-
 
 .obsah {
   background-color: #31363b;
-  position: relative;
-  top: -150px;
-  padding-bottom: 20px;
-  
-
-  
-  
+  width: 300px;
+  padding: 30px;
 }
 
 
 .logo {
+  position: absolute;
+  top: 210px;
+  left: 250px;
   background-color: #b92e81;
-  position: relative;
-  z-index: 1;
-  width: 100px;
-  height: 100px;
   border-radius: 50%;
-  position: relative;
-  left: 360px;
-  top: -70px;
+  box-shadow: 2px 2px 2px rgba(36, 35, 35, 0.5)
 
 }
-  
 
-
-  
-
-
-.odkazy {
+.odkazy { /* celé třídě odkazy zapneš flexbox, nastavíš flex-wrap, aby se to zalomilo, a flex-direction: row, aby se ten obsah zarovnal řádkově*/
+  font-family:'Montserrat', sans-serif;
   background-color: #31363b;
+  padding: 0;
+  margin: 0;
+  width: 300px;
+  text-align: center;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 500px;
-  padding: 50px;
-  margin-top: -180px; }
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+} 
 
 
-li a {
-  color: white;
-  text-decoration: none;
-  font-size: 30px;
-  font-family: 'Montserrat';
-  font-weight: bold;
-  text-transform: uppercase;
-
-
+.odkazy a {
+  color: rgb(207, 202, 202);
+    text-decoration: none;
+    text-transform:uppercase;
+    font-weight: bold;
 }
 
 .odkazy li {
-  display: inline-flex;
- 
- 
+  display: block;
+  padding: 10px;
+}
 
-
-
+.portfolio {  /* hornímu odkazu - portfoliu - hodíš flex-grow: 4, ostatním (facebook a twitter) flex-grow: 2, aby byl ten horní odkaz výrazně větší, nakonec portfoliu nastavíš flex-basis: 100%, aby poměrově tomu hornímu odkazu zbyl veškerý prostor v řádku*/
+  border-top: 2px solid #3f464d;
+  border-bottom: 2px solid #3f464d;
+  flex-grow: 4;
+  flex-basis: 100%;
+}
+  
+/* přidání pozadí při přejetí myší (hover) */
+.portfolio:hover{
+  background-color: #e74c3c;
 }
 
 .twitter {
+  text-align: center;
+  flex-grow: 2;
+}
+
+.twitter:hover {
   background-color: #1da1f2;
-  padding: 10px 40px;
 }
 
 .facebook {
-  padding: 10px 40px;
+  text-align: center;
+  border-bottom: 2px solid #3f464d;
+  flex-grow: 2;
 }
 
-.paragraf {
+.facebook:hover{
+  background-color:#3b5998;
+}
 
